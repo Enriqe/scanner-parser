@@ -108,7 +108,7 @@ public:
                 return 5;
             default:
                 /*
-                 * Illigal character.
+                 * Illegal character.
                  */
                 return 6;
         }
