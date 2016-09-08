@@ -56,11 +56,8 @@ public:
                 return 1;
             case '$':
                 return 2;
-            case '(':
-            case ')':
-                return 3;
             case '.':
-                return 4;
+                return 3;
             case 'a':
             case 'b':
             case 'c':
@@ -87,38 +84,34 @@ public:
             case 'x':
             case 'y':
             case 'z':
-            case 'A':
-            case 'B':
-            case 'C':
-            case 'D':
-            case 'E':
-            case 'F':
-            case 'G':
-            case 'H':
-            case 'I':
-            case 'J':
-            case 'K':
-            case 'L':
-            case 'M':
-            case 'N':
-            case 'O':
-            case 'P':
-            case 'Q':
-            case 'R':
-            case 'S':
-            case 'T':
-            case 'U':
-            case 'V':
-            case 'W':
-            case 'X':
-            case 'Y':
-            case 'Z':
+                return 4;
+            case '(':
                 return 5;
+            case ')';
+                return 6;
+            case ',';
+                return 7;
+            case 'S'
+                return 8;
+            case 'U'
+                return 9;
+            case 'M'
+                return 10;
+            case 'B'
+                return 11;
+            case 'D'
+                return 12;
+            case 'I'
+                return 13;
+            case 'V'
+                return 14;
+            case 'L'
+                return 15;
             default:
                 /*
                  * Illegal character.
                  */
-                 return 6;
+                 return 16;
         }
     }
 
