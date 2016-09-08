@@ -84,6 +84,24 @@ public:
             case 'x':
             case 'y':
             case 'z':
+            case 'A':
+            case 'C':
+            case 'E':
+            case 'F':
+            case 'G':
+            case 'H':
+            case 'J':
+            case 'K':
+            case 'N':
+            case 'O':
+            case 'P':
+            case 'Q':
+            case 'R':
+            case 'T':
+            case 'W':
+            case 'X':
+            case 'Y':
+            case 'Z':
                 return 4;
             case '(':
                 return 5;
