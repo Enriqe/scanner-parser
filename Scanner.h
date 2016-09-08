@@ -17,19 +17,30 @@ private:
     };
 public:
     Scanner(){
-        transMatrix[6][7] = {
-            {0, 1, 2, 4, 5, ERROR, ERROR},
-            {100, 1, ERROR, 100, 100, ERROR, ERROR},
-            {ERROR, ERROR, ERROR, ERROR, ERROR, 3, ERROR},
-            {101, 3, -1, 101, 101, 3, ERROR},
-            {102, 102, 102, 102, 102, 102, ERROR},
-            {103, 103, 103, 103, ERROR, ERROR, ERROR}
+        transMatrix[17][16] = {
+            {0     , 1     , 5     , ERR   , ERR   , 20    , 22    , 24    , 8    , ERR  , 16   , ERR  , 12   , ERR  , ERR  , ERR },
+            {102   , 1     , ERR   , 3     , ERR   , ERR   , ERR   , 102   , ERR  , ERR  , ERR  , ERR  , ERR  , ERR  , ERR  , ERR },
+            {104   , 3     , ERR   , ERR   , ERR   , ERR   , ERR   , 104   , ERR  , ERR  , ERR  , ERR  , ERR  , ERR  , ERR  , ERR },
+            {ERR   , ERR   , ERR   , ERR   , 6     , ERR   , ERR   , ERR   , 6    , 6    , 6    , 6    , 6    , 6    , 6    , 6   },
+            {107   , 6     , ERR   , ERR   , 6     , ERR   , ERR   , 107   , 6    , 6    , 6    , 6    , 6    , 6    , 6    , 6   },
+            {ERR   , ERR   , ERR   , ERR   , ERR   , ERR   , ERR   , ERR   , ERR  , 9    , ERR  , ERR  , ERR  , ERR  , ERR  , ERR },
+            {ERR   , ERR   , ERR   , ERR   , ERR   , ERR   , ERR   , ERR   , ERR  , ERR  , 10   , 10   , ERR  , ERR  , ERR  , ERR },
+            {111   , ERR   , ERR   , ERR   , ERR   , ERR   , ERR   , 111   , ERR  , ERR  , ERR  , ERR  , ERR  , ERR  , ERR  , ERR },
+            {ERR   , ERR   , ERR   , ERR   , ERR   , ERR   , ERR   , ERR   , ERR  , ERR  , ERR  , ERR  , ERR  , 13   , ERR  , ERR },
+            {ERR   , ERR   , ERR   , ERR   , ERR   , ERR   , ERR   , ERR   , ERR  , ERR  , ERR  , ERR  , ERR  , ERR  , 14   , ERR },
+            {115   , ERR   , ERR   , ERR   , ERR   , 115   , ERR   , 115   , ERR  , ERR  , ERR  , ERR  , ERR  , ERR  , ERR  , ERR },
+            {ERR   , ERR   , ERR   , ERR   , ERR   , ERR   , ERR   , ERR   , ERR  , 17   , ERR  , ERR  , ERR  , ERR  , ERR  , ERR },
+            {ERR   , ERR   , ERR   , ERR   , ERR   , ERR   , ERR   , ERR   , ERR  , ERR  , ERR  , ERR  , ERR  , ERR  , ERR  , 18  },
+            {119   , ERR   , ERR   , ERR   , ERR   , 119   , ERR   , ERR   , ERR  , ERR  , ERR  , ERR  , ERR  , ERR  , ERR  , ERR },
+            {121   , 121   , 121   , ERR   , ERR   , 121   , 121   , 121   , 121  , ERR  , 121  , ERR  , 121  , ERR  , ERR  , ERR },
+            {123   , ERR   , ERR   , ERR   , ERR   , ERR   , ERR   , 123   , ERR  , ERR  , ERR  , ERR  , ERR  , ERR  , ERR  , ERR },
+            {125   , 125   , 125   , ERR   , ERR   , 125   , 125   , ERR   , 125  , ERR  , ERR  , ERR  , 125  , ERR  , ERR  , ERR }
         };
     }
 
     int filterChar(char c){
         switch(c){
-                        case ' ':
+            case ' ':
             case '\t':
                 return 0;
             case '0':
@@ -48,10 +59,7 @@ public:
             case '(':
             case ')':
                 return 3;
-            case '+':
-            case '-':
-            case '*':
-            case '/':
+            case '.':
                 return 4;
             case 'a':
             case 'b':
@@ -110,7 +118,7 @@ public:
                 /*
                  * Illegal character.
                  */
-                return 6;
+                 return 6;
         }
     }
 
